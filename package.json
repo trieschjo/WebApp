@@ -1,0 +1,19 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "WebTech_WebApp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trieschjo/WebApp.git"
+  },
+  "author": "Jona Triesch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trieschjo/WebApp/issues"
+  },
+  "homepage": "https://github.com/trieschjo/WebApp#readme"
+}
