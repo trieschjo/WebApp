@@ -1,5 +1,3 @@
-module.exports = connectDB
-
 const mongoose = require("mongoose");
 const config = require("config");
 
@@ -15,11 +13,12 @@ const connectDB = async () => {
 
     });
 
-    console.log(`Connected with MongoDP on ${conn.connection.host}`);
+    console.log(`Connected with MongoDB on ${conn.connection.host}`.green.italic);
 
   } catch (error) {
-    console.log(`Error: ${error.message}`);
+    console.log(`Error: ${error.message}`.red.bold);
     process.exit(1);
   }
 };
 
+module.exports = connectDB
