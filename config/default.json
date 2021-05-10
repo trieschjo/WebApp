@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://user411:Nichtlustig411@webappcluster.9gjql.mongodb.net/WebAppDB?retryWrites=true&w=majority",
+  "PORT": 5000
+}

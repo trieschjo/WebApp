@@ -1,12 +1,17 @@
+const config = require("config)");
 const express = require("express");
+const connectDB = require("./config/db");
+
 const app = express();
 
-app.get("/webapp", (req, res) => {
+connectDB();
+
+app.get("/api/webapp", (req, res) => {
   res.send("API running...");
 });
 
-app.listen(5000, () => {
-  console.log("App listening on port 5000");
+const PORT = config.get("PORT");
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
 });
-
-
