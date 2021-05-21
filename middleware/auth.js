@@ -9,13 +9,12 @@ module.exports = function (req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token.config.get("jwtsecret"));
+    const decoded = jwt.verify(JSON.parse(token), config.get("jwtsecret"));
 
-    req.user = decoded.user
+    req.user = decoded.user;
 
-    next()
-
+    next();
   } catch (error) {
-    res.status(401).json({ errors: [{ msg: "Token ungültig" }] })
+    res.status(401).json({ errors: [{ msg: "Token ungültig" }] });
   }
 };
